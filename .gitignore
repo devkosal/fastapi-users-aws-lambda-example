@@ -1,0 +1,7 @@
+__pycache__/
+python/
+*.zip
+*.db
+config.py
+.DS_Store
+.vscode/
