@@ -11,7 +11,7 @@ from pydantic import validator, conint
 from datetime import date
 from mangum import Mangum
 
-# imports SECRET, db login details, project name, stage name (see README.md for sample file)
+# imports SECRET, db login details, project name, stage name (see README.md for sample varaibles)
 from config import * 
 
 import pymysql
@@ -131,6 +131,6 @@ async def shutdown():
     
 @app.get("/")
 def read_root():
-    return {"Hello": "Welcome to Trident Database's FastAPI "}
+    return root_response
 
 lambda_handler = Mangum(app=app)
