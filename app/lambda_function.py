@@ -7,7 +7,7 @@ from fastapi_users.db import SQLAlchemyBaseUserTable, SQLAlchemyUserDatabase
 from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
 from sqlalchemy import Integer, String,  Date, Column
 from typing import Optional
-from pydantic import validator, conint
+from pydantic import conint
 from datetime import date
 from mangum import Mangum
 
@@ -15,7 +15,7 @@ from mangum import Mangum
 from config import * 
 
 import pymysql
-pymysql.install_as_MySQLdb()
+pymysql.install_as_MySQLdb() # used in the mysql connection
 
 DATABASE_URL = f'mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_ADDRESS}/{DB_NAME}' if not testing else 'sqlite:///./test.db'
 

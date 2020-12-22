@@ -1,0 +1,7 @@
+FILE=fastapi-mysql.zip
+if [ -f "$FILE" ]; then
+    aws s3 cp $FILE s3://$1/$FILE
+else 
+    echo "$FILE does not exist. Make sure to run create_aws_layer first"
+fi
+
