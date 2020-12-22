@@ -21,7 +21,6 @@ Define the following variables as per your needs:
 testing = False # set this to True to test on a local sqlite db
 SECRET = "SECRET"    
 PROJECT_NAME = "My Users API"
-STAGE_NAME = "/dev" # remember this so you set the correct stage name in AWS API settings later
 DB_USERNAME = "username"
 DB_PASSWORD = "password"
 DB_ADDRESS = "1.1.1.1" #  db host name/address
